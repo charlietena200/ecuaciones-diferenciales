@@ -1,0 +1,45 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Actividad de fin de semana\\\\
+1.$y' - y^3 = (x-y')y^2$\\\\
+Nos damos cuenta que la ecuación no es separable porque no encotramos una forma de tener las x separadas de las y. Por ello, no la podemos resolver por el método de variables separables.\\\\\\
+2.$y'= cos(x+y)+cos(x-y)$\\\\
+Aplicamos las propiedades trigonométricas y nos queda que:\\\\
+\centerline{= $ cosx cosy + senx seny + cosx cosy - senx seny$}\\\\
+Simplifiacndo nos queda: $ = 2cosx seny $\\\\
+Notamos que la podemos separar en g(x)= 2cosx y h(x) = cosy\\\\
+Ahora resolvemos, sea f(x)= $\int \frac{1}{cosy} dy$ entonces :\\\\
+f(x) = $\int 2cosx dx = 2senx + c $\\\\
+Por lo que encontramos una solución implícita.\\\\\\
+3. sen(x-y)dx+dy=sen(x+y)dx\\\\
+Aplicando propiedades trigonométricas nos queda:\\\\
+\centerline{$(senx cosy - seny cosx) dx + dy = (senx cosy + sey cosx )dx$ }\\\\
+Por lo que nos queda dy= $(2seny cosx) dx$. Notamos que es separable con g(x) = 2senx y h(x) = cosy\\\\
+Tomamos f(x) como $\int \frac{1}{senx} dy$ y tenemos que :\\\\
+\centerline{$f(x) = \int 2cosx dx = 2senx + c$}\\\\
+Por lo que encontramos una solución implícita.\\\\\\
+4. $y^2 dx - xy dy = x^2 y dy$\\\\
+
+
+\end{document}

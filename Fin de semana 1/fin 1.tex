@@ -1,0 +1,47 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Alberto Gallegos Tena\\\\
+Actividad fin de semana\\\\
+1-$\int \frac{e^{4x}+3}{e^{3x}} dx $\\\\
+Separamos los fracciones $\int \frac{e^{4x}}{e^{3x}} dx + \int \frac{3}{e^{3x}} dx$\\\\
+La primera integral es directa, y en la segunda por cambio de variable\\\\
+\centerline{$e^x + 3[\int e^u]du $ con u=-3x y du = -3dx}\\\\
+Hacemos la sustitución y nos queda:\\\\
+\centerline{$e^x - e^u = e^x - e^{-3x}$}\\\\
+Por lo tanto $\int \frac{e^{4x}+3}{e^{3x}} dx = e^x - e^{-3x} +c $\\\\\
+2-$\int \frac{x+1}{x^3 + x^2 -6x} dx $\\\\
+Se integra por fracciones parciales, para lleos desarrollamos el polinomio:\\\\
+\centerline{$\int \frac{x+1}{x(x-2)(x+3)} dx $}\\\\
+Entonces encontramos un a, b y c para $\frac{a}{x} + \frac{b}{x-2} + \frac{c}{x+3}$\\\\
+Nos queda el sistema $a(x-2)(x+3) + b(x)(x+3) + c(x)(x-2) = x+1$\\\\
+Sustituyendo primero x=0, x=2, obtenemos que a=$-\frac{1}{6}$ , b=$\frac{3}{10}$ y c=$-\frac{2}{15}$\\\\
+\centerline{$\int [-\frac{1}{6x} + \frac{3}{10(x-2)} - \frac{2}{15(x+3)}] dx $}\\\\
+Ahora integramos directamente:\\\\
+\centerline{$-\frac{ln}{6} + \frac{3ln(x-2)}{10} - \frac{2ln(x+3)}{15}$}\\\\
+Por lo tanto,$\int \frac{x+1}{x^3 + x^2 -6x} dx  = -\frac{ln}{6} + \frac{3ln(x-2)}{10} - \frac{2ln(x+3)}{15} + c $\\\\\\
+3-$\int xcosx dx$\\\\
+La vamos a integrar por partes, tomamos u=x, u'=1 entonces v'=cos y v=-senx, por lo tanto nos queda\\\\
+\centerline{=$xsenx - \int senx = xsenx + cosx$}\\\\
+Entonces, nos queda que :\\\\
+\centerline{$\int xcosx dx = xsenx - \int senx = xsenx + cosx + c$}\\\\
+\end{document}

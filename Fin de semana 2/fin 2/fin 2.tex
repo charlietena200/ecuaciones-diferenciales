@@ -1,0 +1,41 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Actividad de fin de semana\\\\
+1. $2x^6 y' + 9x^8 y^4 =0$\\\\
+Para determinar si se puede resolver por serparación de variables debemos encontrar y g(x) y un p(x), para ello vamos a factorizar, nos queda:\\\\
+\centerline{$ 2x^6y' = - 9x^8 y^4 \quad\rightarrow\quad \frac{y'}{y^4} = \frac{-9x^8}{2x^6}$ }\\\\
+Ahora integramos ambos lados y nos queda que:\\\\
+\centerline{$\int \frac{y'}{y^4} dy = \int \frac{-9x^8}{2x^6} dx$}\\\\
+\centerline{$ \frac{-1}{3y^3} = \frac{-9}{2} \frac{x^3}{3} + c$ }\\\\
+Por lo que encontramos una solución implicita la cual es:\\\\
+$2x^6 y' + 9x^8 y^4 =0$ donde $ \frac{-1}{3y^3} = \frac{-3x^3}{2} + c$ y es homogénea. \\\\\
+2. $x^3 y' - cos(x)log(y)=0 $\\\\
+Similar a la ecuación pasada, podemos separarla en dos partes y nos queda que\\\\
+\centerline{$\frac{y'}{log(y)} = \frac{-cos(x)}{x^3}  $}\\\\
+Por lo que, es ecuación diferencial homogénea y la solución implícita nos quedaría como:\\\\
+\centerline{$\int \frac{y'}{log(y)} = \int \frac{-cos(x)}{x^3}  $ }\\\\\\
+3. $cos^2\left(x\right)y'\:+\:cos\left(y\right)sen\left(x\right)\:=\:sen\left(x+y\right)$\\\\
+No encontré una forma de separar las varibles de un lado o del otro. Por lo que concluyo que no tiene solución por variables separables.
+
+\end{document}

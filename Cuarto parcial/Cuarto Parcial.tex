@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Cuarto Parcial\\\\
+Ejercicio 1. Para la ecuación $y^{(5)}-2y^{(4)}-y^{(3)}-2y''-20y'+24y = 0$, indica el operador L asociado en términos del operador D, con eso determina el ker(L) su dimensión y proporciona una base.\\\\
+Solución: por definición, el operador diferencial en términos de D queda:\\\\
+\centerline{$L= \sum_{j=0}^{5} a_j D^j = D^5 - 2D^4 - D^3 - 2D^2 -20D + 24 $}\\\\
+Se expresa:\\\\
+\centerline{$(D^5 - 2D^4 - D^3 - 2D^2 -20D + 24)(y)=0$}\\\\
+Resolviendo el polinomio característico, nos quedan las raíces 3,1,-2,2i,-2i. Por teorema sabemos que el conjunto fundamental de soluciones es:\\\\
+\centerline{$\{e^{3x}, e^x, e^{-2x}, sen(2x), cos(2x)\}$}\\\\
+Sabemos que por definición, la cantidad de soluciones nos indica la dimensión, por lo que es de dimensión 5.
+\\\\\\
+Ejercicio 2. Proposiciona la definiciónn de:\\\\
+a ) Ecuación auxiliar\\\\
+Se denomina ecuación auxiliar de L(x)=0 a la ecuación:\\\\
+\centerline{$r^n + \sum_{j=0}^{n-1} a_j r^j =0$}\\\\
+b ) Polinomio auxiliar\\\\
+Al polinomio p(r) = $r^n + \sum_{j=0}^{n-1} a_j r^j$ se le denomina polinomio auxiliar.\\\\
+c ) Autovalores propios\\\\
+Se denominan autovalores propios a las raíces de la ecuación auxiliar, pueden ser simples o múltiples con el mismo criterio que las correspondientes raíces de la ecuación, siendo el órden el mismo que el órden como raíz correspondiente.\\\\\\
+Ejercicio 3. Sean f1...., fn $\epsilon C^n (I,R) con I \subset R$ intervalo. Prueba que:\\\\
+$\includegraphics[scale=0.8]{Demostración.png}$\\\\
+Para demostrarlo usaremos inducción, sea $\nabla(x)$ la función de la igualdad anterior.\\\\
+Queremos demostrar que $\frac{d}{dx} W[f1,.....fn]= \nabla(x)$. Para el primer caso n=2 hacemos W[f1,f2]= f1*f2' - f1'*f2, entonces por regla de la cadena $\frac{d}{dx} W[f1,f2] =   f1*f2'' - f1''*f2 +  f1'*f2' - f1''*f2 = f1f2'' - f1''f2$, por lo que se cumple para el caso base.\\\\
+Nuestra hipótesis de inducción es que se cumple $\frac{d}{dx} W[f1,....fn]= \nabla(x)$\\\\
+Suponiendo que es cierto para n-1, probamos 
+\\\\\\
+Ejercicio 4. Para la ecuación L(y) = 0, con L un operador lineal diferencial (como se presentó en clase), demuestra que existe un conjunto fundamental de soluciones en un intervalo I.\\\\
+Solución: tomamos $x_0 \epsilon I$, por el teorema de existencia sabemos que para todo k que va de$(0,n-1)$ exiten funciones $f_k (x)$ que son solución a la ecuación diferencial tales que cumplen $y_k ^{(k)} = 1 $ y $y_k ^{(j)} = 0$ si j diferente de k.\\\\
+Por el colorario 1, sabemos que las funciones y1,.....,yn son linealmente independientes en I. Sabemos que para tener un conjunto fundamental de soluciones, nuestro conjunto debe de ser linealmente independiente en I.\\\\
+Sean c0, c1,....,cn constantes tales que $c0 y_0 + c1y_1 +.....+cn-1 y_{n-1} = 0$ para todo $x\epsilon I$. Derivando n-1 veces y susituyendo x por $x_0$ notamos que:\\\\
+\centerline{$\sum_{k=0}^{n-1} c_k y_k (x_0) = c_0 * 1 + 0 =0 \rightarrow c_0=0$}\\\\
+\centerline{......}\\\\
+\centerline{$\sum_{k=0}^{n-1} c_k y_k^{(n-1)} (x_0) = c_{(n-1)} * 1 + 0 =0 \rightarrow c_{n-1}=0$}\\\\
+Por lo que las n funciones son linealmente independientes y por definición, tenemos un conjunto fundamental de soluciones en I.\\\\\\
+Eejercicio 5. Si {y1, . . . , yn} es un conjunto fundamental de soluciones para la ecuación L(y) = 0 de orden n, prueba que si $\phi$ es una solución, es decir si $\phi$ = 0, existen c1, . . . , cn $\epsilon$ R tales que:\\\\
+\centerline{$\phi(x) =  \sum_{j=1}^{n} cj yj (x)$}\\\\
+Solución: tomamos {y1, ... , yn} un conjunto fundamental de soluciones, sabemos por colorario visto en clase que se cumple que $W[y1, ..... ,yn] \neq 0$. Considerando el siguiente sistema de n ecuaciones con incógnitas c1,......,cn:\\\\
+\centerline{$\sum_{k=1}^{n} c_k y_k (x) = \phi (x)$}\\\\
+\centerline{......}\\\\
+\centerline{$\sum_{k=1}^{n} c_k y_k^{(n-1)} (x) = \phi^{(n-1)} (x)$}\\\\
+Con esto, podemos notar que como el wronskiano es dirente de cero, y las cn son reales, el sistema tiene una única solución con n constantes que verifican el sistema. Por el teorema de existencia y unicidad podemos decir que se cumple que $\phi(x) =  \sum_{j=1}^{n} cj yj (x)$.\\\\\\
+Ejercicio 6. Demuestra que el conjunto de soluciones, S, de una ecuación diferencial lineal de orden n es un espacio afín.\\\\
+Solución:\\
+Sabemos por teorema visto que el conjunto de soluciones de la ecuación homogénea es un espacio vectorial, por lo que queremos probar que el conjunto de soluciones a la ecuación completa es un espacio afín de dimensión n construído sobre el espacio vectorial de soluciones a la ecuación homogénea. \\\\\\
+Ejercicio 7. Tomando el conjunto $P_n : \{P \epsilon R[x]  | \exists n \epsilon N \cup {0} : P(x) = x^n, \forall x \epsilon R \}$ donde R[x] es el conjunto de polinomios con coeficientes reales y una variable, además $x^0$ = 1. Demuestra que $P_n$ es linealmente independiente\\\\
+Para que sean linealmente independientes, el wronskiano no tiene que ser nulo.\\\\\\
+Ejercicio 8. Las funciones $f_i : R \rightarrow R, x \rightarrow x^ i e^{rx}$ con $i\epsilon \{0, 1, . . . , n\} $y $r \epsilon$ R fijo, ¿son linealmente independientes ?\\\\\\
+Ejercicio 9. Resuelva las siguientes ecuaciones, usando al menos una vez el método del anulador y al menos una vez el método de variación de parámetros\\\\
+1) $y^{(7)} - 7y^{(6 )} + 20y^{(5)} - 32y^{(4)} + 35y''' - 29y'' + 16y' - 4y = x^2 cos(3x)$\\\\
+Para el método primero vamos a encontrar la solución a la ecuación homogénea asociada, la cual por definición es:\\\\
+\centerline{ea= $ r^{7} - 7r^{6 } + 20r^{5} - 32r^{4} + 35r^3 - 29r^2 + 16r - 4 =0$}\\\\
+Factorizando el polinomio, encontramos que las raíces son { 1, 1, 1, 2, 2, i, -i}. Por definición la solución a la ecuación homogénea es:\\\\
+\centerline{$y_g = C1e^x + C2xe^x + C3x^2 e^x + C4e^{2x} + C5xe^{2x} + C6cos(x) + C7sen(x)$}\\\\
+Para la solución particular nos queda un sistema de 7 ecuaciones.\\\\\\
+2) $y^{(5)} - 4y^{(4)} + 6y^{(3)} - 6y^{(2)} + 5y^{(1)} - 2y = e^x $ \\\\
+Solución: vamos a resolverla por el método del anulador. Por definición, el operador L en términos de D es:\\\\
+L=$D^5 - 4D^4 + 6D^3 - 6D^2 + 5D - 2$\\\\
+Como g(x)=$e^x$, usando la tabla tenemos que el operador anulador es:\\\\
+A= D -1\\\\
+Por el método del anulador, la ecuación la transformación en:\\\\
+\centerline{(D-1)$(D^5 - 4D^4 + 6D^3 - 6D^2 + 5D - 2)$(y)=0}\\\\
+Encontrando las raíces de la ecuación característica, nos quedan los valores 1,2,1,1,i,-i. Sabemos resolver por teoremas la ecuación:\\\\
+\centerline{$\phi (x) = c1x + c1x^2 + c3x^3 + c4e^{2x} + c5cos(x) + c6sen(x)$}\\\\
+Notamos que los últimos 5 dígitos se anulan por ser soluciones de la ecuación homogénea asociada, por lo que tenemos que encontrar c1 tal que:\\\\
+\centerline{$(D^5 - 4D^4 + 6D^3 - 6D^2 + 5D - 2)(c1x)= e^x$}\\\\
+Aplicando el operador lineal con sus respectivas derivadas, y resolviendo el sistema, nos queda que la solución particular es yp(x)=$-\frac{1}{4} x^2 e^x$\\\\
+Por teorema sabemos que la solución general es la suma de la solución a la ecuación homogénea asociada y a la particular, por lo que la solución es:\\\\
+\centerline{$y(x) = -\frac{1}{4} x^2 e^x + c1e^x + c2xe^x + c3e^{2x} + c4cos(x) + c5sen(x)$}\\\\\\
+3) $ y^{(6)} - 3y^{(5)} - 6y^{(3)} + 5y^{(2)} - 3y' + 2y = 2x^3 + 3x - 1$ \\\\
+Solución: usamos el método del anulador para resolverla. Primero, por definición el operador L en términos de D es:\\\\
+L= $D^{6} - 3D^{5} - 6D^{3} + 5D^{2} - 3D + 2$\\\\
+Ahora, usando la tabla tenemos que nuestra función g(x) = $ 2x^3 + 3x - 1$, por lo que el operador anulador queda:\\\\
+A= $D^{4}$\\\\
+Por el método del anulador, la ecuación la transformamos en:\\\\
+\centerline{$D^3 (D^{6} - 3D^{5} - 6D^{3} + 5D^{2} - 3D + 2) (y )=0$}\\\\
+Por definición, nuestra ecuación carácterística en términos de t queda:\\\\
+ec= $t^{9} - 3t^{8} - 6t^{6} + 5t^{5} - 3t^4 + 2t^3 = 0$\\\\
+Encontramos las raíces que son 0, 0, 0, 0.68, 3.4, $\alpha i , -\alpha i , \alpha_2 i , -\alpha_ i$ con $\alpha$ el coeficiente de las raíces imaginarias (podemos darnos cuenta al graficar la función).\\\\
+Por lo que la solución general, por ser una ecuación homogénea (que sabemos resolver por teoremas) a esta ecuación es:\\\\
+\centerline{$\phi(x) = c1 + c2x + c3x^2 + c4e^{0.68 x} + c5 e^{3
+.4x} + c6cos(\alpha x) + c7sen(\alpha x) + c8cos(\alpha_2 x) + c9sen(\alpha_2 x)$}\\\\
+Notamos que por los últimos 6 términos se anulan con el operador lineal $D^{6} - 3D^{5} - 6D^{3} + 5D^{2} - 3D + 2$ por ser soluciones de la ecuación homogénea asociada. Por lo que tenemos que encontrar c1,c2 y c3 tales que :\\\\
+\centerline{$(D^{6} - 3D^{5} - 6D^{3} + 5D^{2} - 3D + 2)(c1 + c2x + c3x^2 )= 2x^3 + 3x + 1$}\\\\
+Aplicando el operador lineal con sus respectivas derivadas nos queda:\\\\
+\centerline{$2c1 + 2c2x - 3c2 + 2c3x^2 - 6c3x + 10c3x =  2x^3 + 3x + 1$}\\\\
+\\\\\
+\end{document}
