@@ -1,0 +1,98 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Actividad de fin de semana\\\\
+Pre clase 12 de Octubre\\\\
+Considerando la función h : R
+2 → R con las siguiente regla de
+correspondencia, si C es la colección de curvas de nivel de h,
+encuentra la familia de curvas ortogonales a C. Además
+proporciona una representación gráfica de cada familia de curvas.\\\\
+1. $h(x,y)=x^2 -2y$\\\\
+Notamos que ya tenemos la ecuación la cual es $x^2 -2y = c$\\\
+Para encontrar las curvas ortogonales a c primero derivamos implícitamente para x, nos queda:\\\\
+\centerline{$2x -2y' = 0$}\\\\
+Como queremos las curvas ortogonales, podemos cambiar y' por $-\frac{1}{y'}$, sustituyendo:\\\\
+\centerline{$2x + \frac{2}{y'} = 0 $}\\\\
+Ahora simplemente resolvemos la ecuación diferencial, la cual, a simple viste se nota que se puede resolver por variables separables:\\\\
+\centerline{$-\frac{2}{y'} = 2x \quad \rightarrow\quad -\frac{1}{y'}= x$}\\\\ 
+\centerline{$y'=-\frac{1}{x}$}\\\\
+Sabemos que para resolver una ecuación de variables separables integramos ambos lados de la igualdad:\\\\
+\centerline{$\int y dy = \int \frac{-1}{x} dx\quad\Longrightarrow\quad y=-log(x) + c0$}\\\\
+Por lo que , la familia de curvas ortoganles a c está dada por $y=-log(x) + c0$ con co$\epsilon R$ y $x>0$.\\\\\\
+2. $h(x,y)=9(x-1)^2 +4(y+2)^2 $\\\\
+Tenemos que la ecuación $9(x-1)^2 +4(y+2)^2 = c$. Donde, para encontrar las curvas ortogonales a c debemos derivar implícitamente para x, nos queda:\\\\
+\centerline{$9(x-1) + 4(y+2)y'=0$}\\\\
+Como queremos las curvas ortogonales, podemos cambiar y' por $-\frac{1}{y'}$, sustituyendo:\\\\
+\centerline{$9(x-1) - 4(y+2)\frac{1}{y}=0\quad \rightarrow \quad y'=\frac{4(y+2)}{9(x-1)}$}\\\\
+Para resolver la ecuación diferencial, notamos que es variables separables, la cual se resuelve integrand ambos lados de la igualdad.\\\\
+\centerline{$\int \frac{1}{4(y+2)}dy = \int \frac{1}{9(x+1)} dx $}\\\\
+Nos queda:\\\\
+\centerline{$\frac{log(y+2)}{4} = \frac{log(x+1)}{9} +c0$}\\\\
+Por lo que, la familia de curvas ortogonales a c está dada por $\frac{log(y+2)}{4} = \frac{log(x+1)}{9} +c0$ con $c0 \epsilon R$.\\\\\\
+3. $h(x,y)=xy$\\\\
+Tenemos la ecuación xy=c. Para encontrar las curvas ortogonales primero derivamos implícitamente respecto a x, lo hacemos por regla de la cadena:\\\\
+\centerline{y+xy'=0}\\\\
+Ahora, como queremos la familia de curvas ortogonales, hacemos el cambio en la pendiente de forma que debemos sustituir y' por $-\frac{1}{y'}$:\\\\
+\centerline{$y-x\frac{1}{y'}= 0 \quad\rightarrow\quad x=yy'$}\\\\
+Notamos que se resuelve por variables separables, de forma que integramos ambos lados de la ecuación y nos queda como resultado:\\\\
+\centerline{$\int y dy = \int x dx   \quad\rightarrow\quad \frac{1}{2} y^2 = \frac{1}{2} x^2  + c0$}\\\\
+$y^2 = x^2 + c0$.\\\\
+Por lo que, la familia de curvas a c está dada por $y^2 = x^2 + c0$  con $c0\epsilon R $\\\\\\\\
+Pre clase 14 Octubre\\\\
+Para cada una de las siguientes ecuaciones proporciona la ecuación
+lineal homogénea asociada y su solución, encontrar una solución
+particular usando coeficientes indeterminados y dar la solución
+general.\\\\
+1.$\frac{d^2y}{dx^2}+ 3 \frac{dy}{dx} - y = -3x^2$\\\\
+Primero debemos encontrar la ecuación lineal homogénea asosiada, la cual notamos que es $y'' + 3y' - y=0 $. Ahora tomamos como ecuación auxiliar $t^2 + 3t - 1 =0$.\\\\
+Usamos la fórmula general para encontrar las raíces de nuestra ecuación, en este caso nos quedan dos suliciones las cuales son:\\\\
+\centerline{$t1= \frac{-3+  \sqrt{13}}{2} \quad\quad t2=\frac{-3-\sqrt{13}}{2}$ }\\\\
+Sabemos que la solución de la ecuación va a estar dada:\\\\
+\centerline{$yh(x)= c1 e^{\frac{-3+  \sqrt{13}}{2}x} + c2 e^{\frac{-3-\sqrt{13}}{2}x}$}\\\\
+Ahora buscamos una solución particular:\\\\
+\centerline{$yp(x)= 3x^2 + 18x +24$ }\\\\
+Por úlitmo, sabemos que la solución general está dada por la suma de la solución particular y la solución a la ecuación lineal asociada homogénea. Por lo que tenemos como solución:\\\\
+\centerline{y(x) = $3x^2 +18x +24 + c1 e^{\frac{-3+  \sqrt{13}}{2}x} +   c2 e^{\frac{-3-\sqrt{13}}{2}x}$}\\\\\\
+2.$-3y'' + y' -y = -2e^{3x}$\\\\
+Primero debemos encontrar la ecuación lineal homogénea asosiada, la cual notamos que es $-3y'' + y' - y=0 $. Ahora tomamos como ecuación auxiliar $-3t^2 + t - 1 =0$.\\\\
+Usamos la fórmula general para encontrar las raíces de nuestra ecuación, en este caso nos quedan dos suliciones las cuales son:\\\\
+\centerline{$t1= \frac{-1+  \sqrt{11 i}}{6} \quad\quad t2=\frac{-1-\sqrt{11i}}{6}$ }\\\\
+Sabemos que la solución de la ecuación va a estar dada:\\\\
+\centerline{$yh(x)= c1e^{\frac{-1+  \sqrt{11 i}}{6}}+c2e^{\frac{-1-\sqrt{11i}}{6}}$}\\\\
+Ahora buscamos una solución particular:\\\\
+\centerline{$yp(x)= \frac{2}{25} e^{3x}$ }\\\\
+Por úlitmo, sabemos que la solución general está dada por la suma de la solución particular y la solución a la ecuación lineal asociada homogénea. Por lo que tenemos como solución:\\\\
+\centerline{y(x) = $ \frac{2}{25} e^{3x} + c1e^{\frac{-1+  \sqrt{11 i}}{6}}+c2e^{\frac{-1-\sqrt{11i}}{6}}$}\\\\\\
+3. $ 2\frac{d^2 y}{dx^2} - 4\frac{dy}{dx} + y = 4sen(x) $ \\\\
+Primero debemos encontrar la ecuación lineal homogénea asosiada, la cual notamos que es $2y'' - 4y' + 4 y=0 $. Ahora tomamos como ecuación auxiliar $2t^2 - 4t + 4 =0$.\\\\
+Usamos la fórmula general para encontrar las raíces de nuestra ecuación, en este caso nos quedan dos suliciones las cuales son:\\\\
+\centerline{$t1= \frac{2+  \sqrt{2}}{2} \quad\quad t2=\frac{2-\sqrt{2}}{2}$ }\\\\
+Sabemos que la solución de la ecuación va a estar dada:\\\\
+\centerline{$yh(x)= c1e^{\frac{2+  \sqrt{2}}{2}}+c2e^{\frac{2-\sqrt{2}}{2}}$}\\\\
+Ahora buscamos una solución particular:\\\\
+\centerline{$yp(x)= -\frac{4}{17} senx + \frac{16}{17}cosx$ }\\\\
+Por úlitmo, sabemos que la solución general está dada por la suma de la solución particular y la solución a la ecuación lineal asociada homogénea. Por lo que tenemos como solución:\\\\
+\centerline{y(x) = $ -\frac{4}{17} senx + \frac{16}{17}cosx + c1e^{\frac{2+  \sqrt{2}}{2}}+c2e^{\frac{2-\sqrt{2}}{2}}$}\\\\\\
+
+\end{document}

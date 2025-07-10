@@ -1,0 +1,80 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Actividad de fin de semana\\\\
+Ejercicios 21/09\\
+1. Encontrar la función N(x,y) para que la sigueinte ecuación sea exacta. Proporicionar solución:\\
+\centerline{ycos(x) + $e^x$ + N(x,y)y' = 0 }\\\\
+Primero sabemos que para que sea exacta se debe cumplir que $M_y = N_x$, por lo que se debe cumplir:\\\\
+\centerline{$M_y = cos(x) \quad\rightarrow\quad N_x=cos(x)$}\\\\
+Por lo que $N(x,y) = \int cos(x) dx = sen(x)+c$\\\\
+Entonces, la ecuación diferencial para que sea exacta queda la forma:\\\\
+\centerline{ycos(x) + $e^x$ + sen(x)y' = 0}\\\\
+Para encontrar la solución tomamos $\omega_x = ycos(x) + e^x$ y $\omega_y=sen(x)y'$ \\\\
+Para encontrar $\omega (x,y)$ integramos M y N y la formamos:\\\\
+\centerline{$\int Mdx = ysen(x)+e^x + c$ y $\int N dy = ysenx + c$}\\\\
+Por lo que $\omega (x,y) = ysenx + e^x$.\\\\
+Entonces tenemos que ycos(x) + $e^x$ + N(x,y)y' = 0  es exacta con solución $\omega (x,y) = ysenx + e^x = c$.\\
+Notamos que va a ser solución en todo $R^2$.\\\\\\
+2. Resolver $y' + sen(x)y^2 -sen(x)y = 0$\\\\
+Intentando resolver por variables seperables, primero despejamos y agrupamos terminos:\\\\
+\centerline{$\frac{dy}{dx} = -sen(x)y^2 + sen(x)y = sen(x)(y-y^2)$}\\
+\centerline{$\frac{dy}{y-y^2}= sen(x) dx$}\\\\
+Por lo que resolvemos por variables separables integrando ambas partes:\\\\
+$\int \frac{dy}{y-y^2}= \int sen(x) dx$\\\\
+$-log(y) + log(y-1) = cos(x) + c $\\\\
+Por lo que nos queda como solución implícita $log(y-1)-log(y)   = cos(x) + c $ con $y>1$.\\\\\\
+Ejercicios día 23/09 \\
+1. Determina si la siguinete función F es homogénea, de ser así,
+indica de qué grado es.\\\\
+\centerline{ F(x,y) = (x + $\sqrt{y^2 - xy}) - \frac{xy + y^2 }{x} + \frac{x^5}{y^4}$)}\\\\
+Primero, tomamos un $t\epsilon R$ y notamos que al hacer F(tx,ty) nos queda:\\\\
+\centerline{ F(tx,ty) = (tx + $\sqrt{(ty)^2 - txty}) - \frac{txty + (ty)^2 }{tx} + \frac{(tx)^5}{(ty)^4}$}\\\\
+Agrupando términos:\\\\
+\centerline{ = $(tx + \sqrt{t^2(y^2 - xy)}) - \frac{t^2xy + t^2y^2 }{tx} + \frac{t^5x^5}{t^4y^4}$}\\\\
+Simplificando las divisiones:\\\\
+\centerline{= $(tx + t\sqrt{(y^2 - xy)}) - \frac{t(xy + y^2) }{x} + \frac{tx^5}{y^4}$}\\\\
+\centerline{ = t(x + $\sqrt{y^2 - xy}) - \frac{xy + y^2 }{x} + \frac{x^5}{y^4}$) = tF(x,y)}\\\\
+Por definición, como F(tx,ty) = tF(x,y), y por el grado del exponente, es homogénea de grado 1.\\\\\\
+2-Determina si las siguinetes ecuaciones son homogéneas y
+proporciona su solución.\\
+a) $(x^2 + y^2 ) dx - xydy = 0$\\\\
+Si tomamos M(x,y) = $x^2 + y^2$ y N(x,y) = $ -xy$, notamos que son homogéneas de orden 2. 
+Por lo que, por definición es homogénea de grado 2. Para resolverla tomaremos cambio de variable u= $\frac{y}{x}$ y se tiene y= ux dy= xdu+udx, por lo que :\\\\
+\centerline{ -$u^2x^2dx - u x^3 du = -u^2x^2 -x^2dx$ }\\\\ 
+\centerline{-$ - u x^3 du = -x^2dx \rightarrow ux^3 du =  x^2 dx$ }\\\\
+Despejando:\\
+\centerline{udu = $\frac{1}{x}dx$}\\\\
+Tenemos una ecuación de variables separables, la cual resuelve integrando ambos lados de la ecuación:\\\\
+$\int u du = \frac{1}{x} dx $\\\\
+$ \frac{u^2}{2} = log(x) +c $\\\\
+Regresando a nuestra variable original u= $\frac{y}{x}$ nos queda:\\\\
+\centerline{$ \frac{(\frac{y}{x})^2}{2} = log(x) +c$}\\\\
+Simplificando\\
+\centerline{$ y = \sqrt{2x^2 log(x)} + c$}\\\\
+Por lo que $ y^2 = 2x^2 log(x) + c$ con $x>0$ es la solución para la ecuación.\\\\\\
+b) $ydx = (x + \sqrt{y^2 - x^2} dy$\\\\
+Primero despejamos y nos queda:\\\\
+\centerline{y' = $\frac{y }{x+ \sqrt{y^2 - x^2}}$} \\\\
+
+\end{document}

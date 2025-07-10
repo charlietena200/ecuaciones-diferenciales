@@ -1,0 +1,69 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Actividad de fin de semana\\\\
+Preclase 19/10/2021\\\\
+
+1. Proporciona una soluciín particular a la siguiente ecuación
+aplicando el principio de superposición y el de variación de
+parámetros. Luego da la solución general, recordando que dicha
+solución debe ser la suma de la particular con la solución de la
+homogónea.\\\\
+\centerline{$y'' - 2y' + y = log(x) + e^{2x}$}\\\\
+Con $x>0$\\\\
+Solución:\\\\\
+Primero notamos que la ecuación lineal homogénea asociada es $y^2  - 2 y + 1 =0 $ donde las soluciones están dadas de la siguiente forma:\\\\
+\centerline{$(y-1)(y-1)= 0 $ con y1=1 y2=2}\\\\
+Por lo que la solución a la ecuación lineal con coeficientes constantes es:\\\\
+\centerline{yh(x)= $ e^x C1 + xe^2 C2$}\\\\
+Ahora vamos a aplicar el principio de supersición y variación de parámetros:\\\\
+Primero resolvemos $y'' - 2y' + y =  e^{2x}$ y nos queda como solución particular yp(x)=$Ae^{2x}$ donde y'p=$2Ae^{2x}$ y y''p=$4Ae^{2x}$. Resolviendo el sistema nos queda que A=1 y que yp1(x)= $e^{2x}$.\\\\ 
+Ahora para $y'' - 2y' + y =  log(x)$ nos queda el sistema\\\\
+\centerline{$v1'(x)e^x + v2'(x)xe^x = 0$}\\
+\centerline{$v1'(x)e^x + v2'(x)(e^x + xe^x) = log(x)$}\\\\
+Resolviendo por regla de Cramer nos queda $v1'(x)=xlog(x)\frac{1}{e^x}$ y $v2'(x)=log(x)\frac{1}{e^x}$. Por lo que v1 y v2 estáran dadas por:\\\\
+\centerline{$v1(x)=\int xlog(x)\frac{1}{e^x}$ y $v2(x)=\int log(x)\frac{1}{e^x}$}\\\\
+Entonces la solución particular es yp2(x)={$e^x \int xlog(x)\frac{1}{e^x} +xe^x \int log(x)\frac{1}{e^x}$.\\\\
+Ahora por el principio de superposición y variación de parámetros, tenemos que la solución general es la solución particular mas la solución de la ecuación homogénea, por lo que juntando todo nos quead:\\\\
+\centerline{yg(x)= yh(x) + yp1(x) + yp2(x)}\\\\
+Sustituyendo:\\
+\centerline{yg(x)= $e^x C1 + xe^2 C2 + e^{2x} + e^x \int xlog(x)\frac{1}{e^x} +xe^x \int log(x)\frac{1}{e^x}$}\\\\\\
+Preclase 21/10/2021\\\\
+Calcula los polinomios característicos de los operadores L (en
+términos del operador D) asociados a las siguientes ecuaciones,
+tambien calculas sus raíces.\\\\
+1.$\frac{d^5 y }{dx^5} - 2\frac{d^4  y}{dx^4}   - 8\frac{d^3 y}{dx^3}  + 16\frac{d^2 y}{dx^2} - 9\frac{dy}{dx}  + 18y =0$\\\\
+Solución:\\\\
+El polinomio característico queda como:\\\\
+\centerline{L=$D^5 - 2D^4 - 8D^3 + 16D^2 - 9D + 18$}\\\\
+Para encontrar las raices vamos a factorizar:\\\\
+$D^5 - 2D^4 - 8D^3 + 16D^2 - 9D + 18 = (D-2)(D-3)(D+3)(D^2 + 1)$\\\\
+Por lo que las raíces son (2,-3,3,i,-i).\\\\\\
+2.$4\frac{d^4  y}{dx^4}   +2\frac{d^3 y}{dx^3} +\frac{dy}{dx} -y =0$\\\\
+Solución:\\\\
+El polinomio caractéristico queda como:\\\\
+\centerline{L=$4D^4 + 2D^3 +D -1 $}\\\\
+Para encontrar las raices vamos a factorizar:\\\\
+$4D^4 + 2D^3 +D -1 = (D+1)(2D-1)(2D^2+1)$\\\\
+Por lo que las raíces son (-1,1/2,$i\frac{1}{\sqrt{2}} , -i\frac{1}{\sqrt{2}}$).\\\\\\
+\end{document}

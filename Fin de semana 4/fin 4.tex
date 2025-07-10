@@ -1,0 +1,62 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Actividad de fin de semana\\\\
+1. xy' = $\sqrt{x^2-y^2} + y$ \\\\
+Notamos que no es exacta, por lo que haremos cambio de variable tomando $u=\frac{y}{x} \rightarrow y=ux$ por lo que dy= xdu + udx\\\\
+Primero dividimos todo entre x y nos queda:\\\
+\centerline{y' = $\frac{\sqrt{x^2 - y^2}}{x} + \frac{y}{x} $}\\
+Simplificando la primer división:\\
+\centerline{$\sqrt{\frac{x^2}{x^2}-\frac{y^2}{x^2}} + \frac{y}{x}= \sqrt{1-(\frac{y}{x})^2} + \frac{y}{x}$}\\\\
+Entonces hacemos el cambio de variable y nos queda:\\\\
+\centerline{y'= $ \sqrt{1-u^2} + u$ }\\\\
+Sustituyendo:\\\\
+\centerline{$\frac{dy}{dx}=  \sqrt{1-u^2} + u \quad \rightarrow \quad \frac{xdu}{dx} + u = \sqrt{1-u^2} + u$}\\\\
+\centerline{$\frac{xdu}{dx} = \sqrt{1-u^2} = x u'$}\\\\
+Por lo que ahora si podemos "separar" nuestras variables de la siguiente forma:\\\\
+\centerline{$\frac{u'}{\sqrt{1-u^2}}  = \frac{1}{x}$}\\\\
+Por lo que resolviendo por variables separables nos queda:\\\\
+\centerline{$\int \frac{1}{\sqrt{1-u^2}} du= \int \frac{1}{x} dx$}\\\\
+Notamos que las integrales salen directas, y nos dan:\\\\
+\centerline{arcsen(u)= ln(x) + c}\\\\
+Con el cambio de variable $u=\frac{y}{x}$\\\\
+$arcsen(\frac{y}{x})= ln(x) + c $\\\\
+Si aplicamos el seno en ambos lados de la ecuación, y despejamos x, tenemos una solución explícita:\\\\
+\centerline{y= x sen(ln(x)) + c}\\\\\\
+2. x+y-2+(x-y-4)y' = 0\\\\
+Primero tomamos M(x,y)=x+y-2 y N(x,y)=x-y-4\\\\
+$M_y = 1 \quad y \quad N_x=1 $ por lo que es exacta, entonces integrando:\\\\
+$\int M dx = \frac{x^2}{2} + xy - 2x + c$\\\\
+$\int N dy= xy - \frac{y^2}{2} -4y + c2$\\\\
+Por lo que formamos un $\omega$  tal que $\omega(x,y)=\frac{x^2}{2}- \frac{y^2}{2} +xy -2x -4y$.\\\\
+Notamos que $\omega_xy = \omega_yx$.\\
+Por lo que tenemos como solución implícita:\\\\
+\centerline{$\frac{x^2}{2}- \frac{y^2}{2} +xy -2x -4y = c $}\\\\\
+3. $\frac{2xy^3}{3} + (x^2y^2-1)y'=0$\\\\ 
+Primero tomamos M(x,y)=$\frac{2xy^3}{3}$ y N(x,y)=$(x^2y^2-1)$\\\\
+ $M_y = 2xy^2 \quad y \quad N_x=2xy^2$ por que lo que es exacta, integrando tenemos que:\\\\
+ $\int M dx = \frac{y^3x^2}{3} + c$\\\\
+ $\int N dy =\frac{x^2y^3}{3}-y +c2$\\\\
+ Por lo que formamos un $\omega$  tal que $\omega(x,y)=\frac{y^3x^2}{3} -y$.\\\\
+ Por lo que tenemos como solución implícita $\omega(x,y)=\frac{y^3x^2}{3} -y$ donde $\omega(x,y) = c$\\
+\end{document}
