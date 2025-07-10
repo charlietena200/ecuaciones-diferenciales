@@ -1,0 +1,112 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\newcommand{\mN}{{\mathbb N}}
+\newcommand{\mZ}{{\mathbb Z}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\fL}{{\mathfrak L}}
+\newcommand{\dst}{\displaystyle}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+Carlos Gallegos\\\\
+Reposición segundo parcial\\\\
+Ejercicio 1. Enuncia la definición de ecuación exacta.\\\\
+Es una ecuación de la forma $M(x,y)dx + N(x,y) dy = 0$ donde las derivadas cruzadas son iguales, es decir, $M_y=N_x$. Es exacta sí sólo sí existe $\omega (x,y)$ tal que $\omega_x (x,y)= M(x,y)$ y $\omega_y (x,y)= N(x,y)$, donde $\omega$ tiene derivadas continuas.\\\\\\
+Ejercicio 2. Proporciona la definición de función homogénea de grado n, vista en clase.\\\\
+Una función $f: D \subset R^2 \rightarrow R$ es homogénea de grado n en D sí y sólo sí para cada $t \epsilon R$ se cumple:\\\\
+\centerline{$f(tx, ty) = t^n f(x,y)$}\\\\\\
+Ejercicio 3. Si L(u) = f(x) es una ecuación lineal inhomogénea con una solución $u_p$ demuestra que la solución es de la forma $u_h$ + $u_p$, donde L($u_h$) = 0. 
+\\\\
+Solución: por definición tenemos que $L(u_p + u_h) = L(u_p) + L(u_h) = f + 0$. Sea $u_{p2}$ otra solución particular a L, notamos que $L(u_{p2} - u_p)=L(u_{p2}) - L(u_p) = f - f = 0$.\\\\
+Ahora, ya que $L(u_{p2} - u_p) = 0$, por definición podemos decir que es una solución homogénea, entonces nos queda de la forma $u_{p2} = u_h + u_p$.\\\\
+Entonces, podemos obtener una solución general $L(u_g)=f$ si es que conocemos una solución particular y la solución homogénea.
+ \\\\\\
+Ejercicio 4. Resuelve las siguientes ecuaciones indicando qué tipo de ecuación es\\\\
+1) $(y+3x-1)- (7x-y+1)y'=0$\\\\
+Primero notamos que las derivadas cruzadas no son iguales. Por otro lado, la función que llamamos g es igual a cero. Por lo que tenemos una ecuación diferencial homogénea no exacta.\\\\
+2)$(ab^2 - atg(b)) + (2ab-asec^2 (b))\frac{da}{db})=0$\\\\
+Notamos que la función g=0, por definición es una ecuación homogénea. Las derivadas cruzadas no son iguales, por lo que no es exacta.\\\\
+3)$\frac{dw}{dt} + 3t^2 w = 6tw^4$ , con y(1)=0\\\\
+Por definición, tenemos una ecuación de Bernoulli con P=$t^2w$, Q=$6tw^4$ y n=4.\\\\
+Por definición vista en clase, hacemos un cambio de variable de la forma z=$w^{1-n} \rightarrow z=w^-3$. Donde el método nos dice que $\frac{dz}{dt} = (1-4)w^-4 \frac{dw}{dt}$. Sustituyendo en nuestra ecuación y simplificando nos queda:\\\\
+\centerline{$\frac{dz}{dt} = -3[6t - 3t^2z]$}\\\\
+Podemos notar que nos queda una ecuación de variables separables, la cual se resuelve integrando ambos lados de la igualdad. Nos queda:\\\\
+\centerline{$\int dz = \int -9t^2 - 18t dt$}\\\\
+Las integrales salen directas:\\\\
+\centerline{$z = -3t^3 -9t^2  + C$ }\\\\
+Ahora vamos a regresar a nuestra variable original $z=w^-3$\\\\
+\centerline{$w= \sqrt[3]{\frac{1}{-3t^3 -9t^2  + C}}$}\\\\ 
+Ya que tenemos nuestra solución la ecuación, vamos hacer nuestra condición inicial y(1)=0. Para ello susituímos:\\\\
+\centerline{$w(1) = \sqrt[3]{\frac{1}{-3 -9  + C}} = 0$}\\\\
+Simplificando, nos queda que c=12. Por lo que resolviendo la ecuación de Bernoulli, y con condiciones iniciales w(1)=0, tenemos que la solución es $w= \sqrt[3]{\frac{1}{-3t^3 -9t^2  + C}}$ con c=12.\\\\\\
+Ejercicio 5. Enuncia el Teorema de Existencia y Unicidad de la solución de una ecuación de la forma:\\\\
+\centerline{$y'+P(x)y=Q(x)$ , con la condición inicial y(x0)=y0}\\\\\
+Sean P y Q funciones continuas en (a,b) que contiene el punto $x_0$. Entonces para cualquier valor inicial $y_0$ existe una única solución y en (a,b) al problema inicial\\\\
+\centerline{$\frac{dy}{dx} + P(x)_y =Q(x) \quad y(x_0)= y_0$}\\\\
+Donde la solución está dada por\\\\
+\centerline{$y(x)=\frac{1}{M(x)}[\int M(x) Q(x) dx + c]$}\\\\
+Para un valor específico de c, donde M es el factor integrante.\\\\\\
+Ejercicio 6. Indica si son homogéneas las siguientes funciones e indica su grado, de ser homogénea.\\\\
+Solución: Una función $f: D \subset R^2 \rightarrow R$ es homogénea de grado n en D sí y sólo sí para cada $t \epsilon R$ se cumple:\\\\
+\centerline{$f(tx, ty) = t^n f(x,y)$}\\\\\\
+Teniendo eso en mente, vamos a probar si son funciones homogéneas.\\\\
+1)$f: R^2 \Rightarrow R, (x,y)\Rightarrow xsen(x) + y^2 $ \\\\
+Notamos que al hacer f(tx,ty)=$tx sen(tx) + t^2y^2$. Notamos que para que fuera homogénea, se debería cumplir que txsen(tx) fuera igual a tx*tsen(x), lo cual no se cumple. Por lo que $f(tx,ty)\neq t^n f(x,y)$. Por definición, el inciso 1) no es una función homogénea.\\\\
+2)$ g: R^2 \Rightarrow R, (x,y) \Rightarrow x^2y-x^3 + 3y^3$\\\\Notamos que al hacer g(tx,ty)=$t^2 x^2 ty - t^3 x^3 + 3t^3y^3$. Fácilmente se ve que se puede factorizar $t^3$, nos queda g(tx,ty)=$t^3( x^2 y -  x^3 + 3y^3)$.Como $t^3$ está multiplicando a toda la función, al final podemos escribir $t^3 g(x,y)$. Por lo que $g(tx,ty)= t^3 g(x,y)$. Por definición, el inciso 2) es una función homogénea de grado 3.\\\\
+3)$h: R^2 \Rightarrow R, (x,y) \Rightarrow \frac{x+y-1}{2x-y+3} $\\\\
+Notamos que al hacer h(tx,ty)=$\frac{tx+ty-1}{2tx-ty+3}$. Notamos que no hay manera de factorizar por completo "t"; debido a ello, no podemos decir que $t^n$ está multiplicando a nuestra función h. Por lo que $h(tx,ty)\neq t^n h(x,y)$. Por definición, el inciso 3) no es una función homogénea.\\\\
+4)$i: R^2 \Rightarrow R, (x,y) \Rightarrow log(xy)+ e^{xy}$\\\\
+Notamos que al hacer i(tx,ty)=$log(t^2xy)+ e^{t^2xy}$. Notamos que no hay manera de factorizar por completo "t", porque no es cierto que $log(t^2xy)$ es igual a $t^2 log(xy)$; debido a ello, no podemos decir que $t^n$ está multiplicando a nuestra función i. Por lo que $h(tx,ty)\neq t^n h(x,y)$. Por definición, el inciso 4) no es una función homogénea.\\\\\\
+Ejercicio 7. ¿Cuándo una ecuación de la forma M(x, y) + N(x, y)
+$\frac{dy}{dx}$ = 0 es homogénea? Proporciona dos ejemplos\\\\
+Una ecuación M(x, y) + N(x, y) $\frac{dy}{dx}$ = 0 es homogénea sí sólo sí M y N son funciones homogéneas de grado n.\\\\
+Ejemplos:\\
+1)x + yy'=0 $\rightarrow$ Denotamos M=x y N=y, ahora usamos $t\epsilon R$ y verificamos que cumple M(tx,ty)= tx = $t^1 M(x,y)$. De igual manera se cumple N(tx,ty)= ty = $t^1 M(x,y)$.Por lo que es homogénea de grado 1.\\\\
+2)y+xy'=0$\rightarrow$ Denotamos M=y y N=x, ahora usamos $t\epsilon R$ y verificamos que cumple M(tx,ty)= ty = $t^1 M(x,y)$. De igual manera se cumple N(tx,ty)= tx = $t^1 M(x,y)$.Por lo que es homogénea de grado 1.\\\\\\
+Ejercicio 8. Indica si las siguientes ecuaciones son homogéneas y de ser así proporciona su sulución haciendo al menos un cambio de variable.\\\\
+1)$x^2 + xy -y^2 = x^2y'$\\\\
+Primero hay que verificar si es homogénea. Para ellos denotamos M(x,y)= $x^2 + xy -y^2 $ y N(x,y)=$ x^2$.\\
+Usando $t\epsilon R$, hacemos M(tx,ty)= $(tx)^2 + txty -(ty)^2  t^2x^2 + t^2xy -t^2y^2= t^2(x^2 + xy -y^2) = t^2 M(x,y)$. Por lo que M es homogénea de grado 2.\\\\
+Ahora para N(tx,ty)= $(tx)^2 = t^2 x^2 = t^2 N(x,y)$.\\\\
+Como ambas funciones son homogéneas, podemos decir que tenemos una ecuación diferencial homogénea. Ahora la resolvemos:\\\\
+Tenemos la ecuación $x^2 + xy -y^2 = x^2\frac{dy}{dx}$\\\\
+Notamos que podemos hacer un cambio de variable de la forma u=$\frac{y}{x} \rightarrow y=ux$, derivando por regla de al cadena dy= udx + xdu.Haciendo el cambio de variable:\\\\
+\centerline{$x^2 + xux -(ux)^2 = x^2\frac{dy}{dx}$}\\\\
+Simplificando:\\\\
+\centerline{$[x^2 + xux -(ux)^2]dx = x^2 dy $ sustituyendo dy $\rightarrow [x^2 + xux -(ux)^2]dx = x^2 (udx + xdu) $}\\\\
+\centerline{$x^2[1+u-u^2]dx = x^2udx + x^3du $}\\\\
+Dividimos entre $x^2$ ambos lados:\\\\
+\centerline{$[1+u-u^2]dx = udx + xdu \quad\rightarrow\quad dx+udx-u^2 dx = udx + xdu$}\\\\
+\centerline{$ (1-u^2) dx = x du\quad\rightarrow\quad \frac{1}{x} dx =  \frac{1}{(1-u^2)}du$}\\\\
+Tenemos una ecuación diferencial de variables separable, la cual sabemos por teorema que se resuelve integrando ambos lados de la ecuación. Regresando a nuestra variable original:\\\\
+\centerline{$\int \frac{1}{x} dx = \int \frac{1}{(1-u^2)}du$}\\\\
+Las integrales son directas, nos queda logaritmo natural:\\\\
+\centerline{$\frac{log(u+1) - log(u-1)}{2}=log(x)+c  $}\\\\
+Ahora regresamos a nuestra variable original u=$\frac{y}{x}$, nos queda:\\\\
+\centerline{$\frac{\sqrt{y+1}}{\sqrt{y-1}} = xe^C$}\\\\
+Por lo que, verificando que la ecuación es homogénea y resolviéndola por el método de variables separables, nos queda la solución implícita $\frac{\sqrt{y+1}}{\sqrt{y-1}} = xe^C$.\\\\\\
+2)$y'= \frac{x - y \sqrt{x^2 - y^2 }}{x+y}$\\\\
+Tenemos la ecuación $(x+y)y'= x - y \sqrt{x^2 - y^2 }$. Primero verificamos si es homogénea y der así, la resolvemos por el método de cambio de variable.\\\\
+Denotamos M(x,y)=$x - y \sqrt{x^2 - y^2 }$ y N(x,y)=(x+y). Sea $t\epsilon R$, verificamos que M(tx,ty)=$tx - ty \sqrt{t^2x^2 - 2^ty^2 } = t M(x,y)$ y N(tx,ty)=(tx+ty)= $t N(x,y)$. Como ambas funciones son homogéneas, es suficiente para decir que tenemos una ecuación diferencial homogénea de grado 1.\\\\
+Para resolverla usaremos el método de cambio de variable, y después método de variables separables. Para ello, se propone el cambio u=$\frac{y}{x} \quad \rightarrow \quad y=ux$, derivando por regla de la cadena nos queda $dy= udx + xdu$. Ahora sustituímos en nuestra ecuación:\\\\
+\centerline{$(x+ux)(udx + xdu)=(x - ux - \sqrt{x^2 - (ux)^2})dx$}\\\\
+Simplificando nos queda:\\\\
+\centerline{$x \frac{du}{dx}(1+u) + u^2  + u = 1- u -\sqrt{1-u^2}$}\\\\
+\centerline{$ \frac{1+u}{1-2u-u^2- \sqrt{1-u^2}} du = \frac{1}{x} dx$}\\\\
+Notamos que tenemos una ecuación de variables separables, la cual por teoremas se resuelve integrando ambos lados de la igualdad.\\\\
+\centerline{$\int \frac{1+u}{1-2u-u^2- \sqrt{1-u^2}} du= \int \frac{1}{x}dx$ }\\\\
+Regresando a nuestra variable original, nos queda la solución implícita a la ecuación diferencial:\\\\
+\centerline{$\int \frac{1+\frac{y}{x}}{1-2\frac{y}{x} - \frac{y^2}{x^2} - \sqrt{1-\frac{y^2}{x^2}}} (\frac{dy-\frac{y}{x}dx}{x})= log(x) + C$}
+\end{document}
